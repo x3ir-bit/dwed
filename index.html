@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chopshop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app" class="hidden">
+        <div class="macos-window">
+            <div class="title-bar">
+                <div class="traffic-lights">
+                    <div class="light close" id="btn-close" title="Close"></div>
+                    <div class="light minimize" id="btn-minimize" title="Minimize"></div>
+                    <div class="light maximize" id="btn-maximize" title="Windowed"></div>
+                </div>
+                <div class="title" id="window-title">Chopshop Contracts</div>
+                <div class="title-spacer"></div>
+            </div>
+
+            <div class="content">
+                <div class="tabs">
+                    <button class="tab-btn active" id="tab-btn-contracts">Contracts</button>
+                    <button class="tab-btn" id="tab-btn-sell">Sell Parts</button>
+                </div>
+
+                <div class="tab-content active" id="tab-contracts">
+                    <div class="contracts-header">
+                        <h2>Available Contracts</h2>
+                        <p class="subtitle">Select a vehicle to steal and chop</p>
+                    </div>
+                    <div class="contracts-grid" id="contracts-grid"></div>
+                    <div class="actions-bar">
+                        <button class="btn btn-refresh" id="btn-refresh">
+                            <span class="btn-icon">&#8635;</span>
+                            <span class="btn-text">Refresh Contracts</span>
+                            <span class="cooldown-timer" id="cooldown-timer"></span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="tab-sell">
+                    <div class="contracts-header">
+                        <h2>Your Parts</h2>
+                        <p class="subtitle">Sell chopped parts for cash</p>
+                    </div>
+                    <div class="contracts-grid" id="parts-grid"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>   
